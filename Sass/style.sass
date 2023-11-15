@@ -1,0 +1,147 @@
+@use 'mixins'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    overflow-x: hidden
+
+header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 60px
+    background-color: #153d7e
+    box-shadow: 2px 1px 3px #898686
+
+    p
+        @include mixins.p-style
+
+        a
+            text-decoration: none
+            padding: 50px
+            color: #ffffffce
+
+ul 
+    display: flex
+    justify-content: space-around
+    
+    li
+        list-style: none
+        padding: 15px
+
+        a
+            text-decoration: none
+            color: #ffffffce
+
+            &:hover
+                color: #4acfe7
+.active
+    color: #4acfe7
+
+.container-home
+    @include mixins.container
+    background-color: #000020
+    
+    button
+        height: 40px
+        width: 135px
+        border-radius: 5px
+        position: relative
+        top: 75%
+        background-color: #4acfe7
+        font-family: 'Times New Roman', Times, serif
+        font-size: 1.1rem
+        border: none
+        cursor: pointer
+
+
+    .text-home
+        @include mixins.text-style
+        color: #ffffffac
+        top: 30vh
+        left: 57%
+        
+
+        p
+            @include mixins.p-style
+
+.container-about
+    @include mixins.container
+    background-color: rgba(197, 215, 247, 0.718)
+
+    .text-about
+        @include mixins.text-style
+        top: 30vh
+        left: 7%
+
+        h3
+            color: #000020
+            
+        p
+            @include mixins.p-style
+            color: #000020
+
+footer
+    width: 100vw
+    height: 70px
+    background-color: #002
+    display: flex 
+    justify-content: center
+    align-items: center
+
+    p
+            @include mixins.p-style
+            color: #ffffffac
+
+.container-contact
+    @include mixins.container
+    justify-content: center
+    align-items: center
+    background-color: rgba(143, 157, 182, 0.718)
+    flex-direction: column
+
+    h3
+        font-size: 1.7rem
+        padding: 5px 
+        margin: 0px 0 20px 0 
+        color: #003
+
+    .icons
+        display: flex
+        position: relative
+        flex-direction: column
+        width: 900px
+        max-width: 700px
+        min-width: 300px
+
+        a
+            width: 230px
+
+        .-um
+            margin-left: 420px
+
+        .-zero
+            margin-left: 80px
+
+        
+        i
+            padding: 25px
+            font-size: 1.4rem
+            color: #002
+            position: relative
+
+#whatsapp-icon
+    font-size: 2.3rem
+    background-color: #07c304
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center           
+    position: fixed
+    bottom: 2%
+    right: 1%
