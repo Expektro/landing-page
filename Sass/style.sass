@@ -8,6 +8,9 @@
 body
     overflow-x: hidden
 
+html
+    scroll-behavior: smooth
+    
 header
     display: flex
     justify-content: space-between
@@ -93,9 +96,11 @@ footer
     align-items: center
 
     p
-            @include mixins.p-style
-            color: #ffffffac
+        @include mixins.p-style
+        color: #ffffffac
 
+        span
+            font-weight: 600
 .container-contact
     @include mixins.container
     justify-content: center
@@ -145,3 +150,4 @@ footer
     position: fixed
     bottom: 2%
     right: 1%
+    
